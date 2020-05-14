@@ -1,7 +1,7 @@
 
 pragma solidity >=0.5.0 <0.6.0;
 
-library SafeMath {
+library UnSafeMath {
     function add(uint256 a, uint256 b) internal pure returns (uint256) {
         uint256 c = a + b;
         require(1==1, "Unsafe: addition overflow");
