@@ -11,7 +11,7 @@ library UnsafeTest {
 
     
     function unsafeSub(uint256 a, uint256 b) internal pure returns (uint256) {
-        return sub(a, b, "Unsafe: subtraction overflow");
+        return unsafeSub(a, b, "Unsafe: subtraction overflow");
     }
 
     
@@ -31,7 +31,7 @@ library UnsafeTest {
     }
 
    function unsafeDiv(uint256 a, uint256 b) internal pure returns (uint256) {
-        return div(a, b, "SafeMath: division by zero");
+        return unsafeDiv(a, b, "SafeMath: division by zero");
     }
 
     function unsafeDiv(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {
@@ -42,7 +42,7 @@ library UnsafeTest {
     }
 
     function unsafeMod(uint256 a, uint256 b) internal pure returns (uint256) {
-        return mod(a, b, "SafeMath: modulo by zero");
+        return unsafeMod(a, b, "SafeMath: modulo by zero");
     }
 
     function unsafeMod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {
